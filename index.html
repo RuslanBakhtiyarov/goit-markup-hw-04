@@ -51,7 +51,7 @@
 							<p>для вашего бизнеса</p>
 						</h2>
 						<div class="flexbox">
-							<a href="" class="btn">Заказать услугу</a>
+							<button href="" class="btn" data-modal-open>Заказать услугу</button>
 						</div>
 					</div>
 				</section>
@@ -335,5 +335,16 @@
 				</div>
 			</div>
 		</footer>
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button class="box-icon-ckose" data-modal-close>
+					X
+					<svg class="icon-close">
+						<use href=""></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
