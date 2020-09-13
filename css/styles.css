@@ -1,11 +1,11 @@
 html {
 	box-sizing: border-box;
 }
-*,
+/* *,
 *::after,
 *::before {
 	box-sizing: inherit;
-}
+} */
 body {
 	font-family: "Roboto", "Raleway";
 	font-size: 14px;
@@ -80,7 +80,10 @@ body {
 	font-weight: 500;
 	font-size: 14px;
 	text-decoration: none;
+
 	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover {
 	color: #2196f3;
@@ -121,7 +124,10 @@ body {
 	color: #757575;
 	margin-right: 50px;
 	text-decoration: none;
-	transition: color 0.2s linear;
+
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .envelope {
 	display: flex;
@@ -157,6 +163,10 @@ body {
 	color: #757575;
 	text-decoration: none;
 	align-items: center;
+
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .phone-link:hover {
 	color: #2196f3;
@@ -225,6 +235,65 @@ body {
 	text-decoration: none;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* кнопка на модалку */
+
+/* .data-modal-close {
+	position: absolute;
+	width: 528px;
+	height: 581px;
+	left: 536px;
+	top: 221px;
+} */
+.backdrop {
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	top: 0;
+	left: 0;
+
+	background: rgba(0, 0, 0, 0.2);
+}
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 528px;
+	height: 581px;
+
+	background: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+.icon-closed-modal {
+	width: 11px;
+	height: 11px;
+
+	fill: #000000;
+}
+.but-modal-closed {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+
+	border-radius: 50%;
+	background: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+
+	padding: 0;
 }
 /*СЕКЦИЯ 2*/
 .info {
@@ -479,6 +548,10 @@ body {
 	border-radius: 50%;
 	background-color: #ffffff;
 	color: #afb1b8;
+
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover {
 	color: #ffffff;
@@ -552,6 +625,10 @@ body {
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
 	fill: #afb1b8;
+
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .partner-link:hover {
 	fill: #2196f3;
@@ -646,7 +723,10 @@ body {
 	height: 38px;
 	padding: 6px 12px;
 	text-decoration: none;
-	transition: color 0.2s linear;
+
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .botton:hover {
@@ -716,10 +796,40 @@ body {
 	display: block;
 	margin: 0px 0px;
 }
-.container-box div {
+/* .container-box div {
 	padding: 20px 24px;
-}
+} */
 .img-size {
-	display: block;
-	width: 368px;
+	display: flex;
+	width: 369px;
+}
+.hover-box {
+	position: relative;
+	overflow: hidden;
+}
+.hover-box::before {
+	content: "Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+
+	background: rgba(33, 150, 243, 0.9);
+
+	transform: translateY(100%);
+	transition-property: transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	padding: 63px 24px;
+}
+
+.hover-box:hover::before {
+	transform: translateY(-0%);
 }
