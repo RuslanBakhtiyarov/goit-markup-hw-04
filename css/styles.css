@@ -246,7 +246,7 @@ body {
 	left: 536px;
 	top: 221px;
 } */
-.backdrop {
+*/ .backdrop {
 	position: fixed;
 	min-width: 100%;
 	min-height: 100%;
